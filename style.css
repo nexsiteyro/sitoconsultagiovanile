@@ -106,11 +106,10 @@ nav a:hover,nav a[aria-current]{background:var(--navy);color:#fff}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}.tile:hover img{transform:scale(1.07)}
 .tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,32,56,.95) 15%,rgba(13,32,56,.1) 70%)}
 .tile div{position:relative;z-index:1;padding:22px}.tile h3{color:#fff;margin:0 0 6px}.tile p{margin:0;color:#dfe8f3;font-size:.97rem}
-.t1 img{object-position:10% 20%;transform-origin:10% 20%}.t2 img{object-position:60% 80%}.t3 img{object-position:90% 10%}.t4 img{object-position:50% 50%}
 .mis{position:relative;color:#fff;padding:110px 0;overflow:hidden;background:var(--navy)}
 .mis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;opacity:.55}
 .mis:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,32,56,.92),rgba(47,93,70,.55))}
-.mis .wrap{position:relative;z-index1;z-index:1}.mis h2{color:#fff;font-size:clamp(2rem,4.4vw,3.4rem);max-width:18ch}.mis p{max-width:56ch;font-size:1.2rem;color:#e4ecf5}
+.mis .wrap{position:relative;z-index:1}.mis h2{color:#fff;font-size:clamp(2rem,4.4vw,3.4rem);max-width:18ch}.mis p{max-width:56ch;font-size:1.2rem;color:#e4ecf5}
 .empty{border-radius:10px;border:0;background:var(--bg);display:flex;gap:20px;align-items:center}.v.alt .empty{background:var(--bg)}.empty h3{margin:0 0 4px}.empty p{margin:0}
 .link{border-radius:10px;border:0;border-left:0;background:rgba(255,255,255,.08);color:#fff;transition:background .2s}
 .link strong{color:#fff;font-size:1.1rem}.link span{color:#cfdbea}
@@ -124,6 +123,10 @@ footer.site{background:var(--navy);border-top:5px solid var(--sun)}
 @media(max-width:860px){.h .wrap{grid-template-columns:1fr;padding-bottom:90px}.h .logo{width:200px;order:-1;justify-self:start}.quick .wrap{grid-template-columns:1fr}.quick a{border-right:0;border-bottom:1px solid var(--line)}nav a{border-radius:var(--r)}}
 @media(prefers-reduced-motion:reduce){.h>img.bg{animation:none;transform:none}.tile img{transition:none}}
 .council .sub{margin:0;opacity:.85}.linkbtn.dk{color:var(--navy2)}
+/* Riquadri attività: foto intere, senza zoom. Per spostare il ritaglio usa p.es. .t1 img{object-position:center top} */
+.tile{min-height:360px}
+.tile img{transform:none;object-position:center}
+.tile:hover img{transform:scale(1.05)}
 /* ===== mobile ===== */
 html{-webkit-text-size-adjust:100%;overflow-x:clip}body{overflow-wrap:break-word}
 .two>*,.fgrid>*,.grid>*{min-width:0}.mail,.doc a,footer a{overflow-wrap:anywhere}
@@ -154,7 +157,5 @@ footer.site{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
 @media(max-width:380px){.brand small{display:none}}
 #cb .btn.cfg{border-color:transparent;text-decoration:underline;padding:6px 10px;min-height:44px}
 @media(max-width:860px){#cb .acts .btn[data-a=cfg]{flex:1 1 100%}#cb{padding-top:12px}}
-.t1 img{transform:scale(1.8);transform-origin:12% 30%}.t2 img{transform:scale(1.7);transform-origin:55% 85%}.t3 img{transform:scale(1.6);transform-origin:95% 20%}.t4 img{transform:scale(1.15)}
-.tile:hover img{transform:scale(1.9)}.t4:hover img{transform:scale(1.25)}
 @media(max-width:860px){.p{display:grid;grid-template-columns:84px 1fr;gap:2px 16px;text-align:left;align-items:center;padding:18px}.p .av{grid-row:1/4;width:84px;height:84px;margin:0}.p h3{margin:0}.p .role{font-size:.9rem}}
 @media(prefers-reduced-motion:reduce){.tile:hover img{transform:none}}
